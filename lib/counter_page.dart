@@ -39,7 +39,7 @@ class _CounterPageState extends State<CounterPage> {
                 'GANJIL',
                 style: TextStyle(color: Colors.red),
               ),
-            Text('$_counter'),
+            Text('$_counter', style: Theme.of(context).textTheme.headline4),
           ],
         ),
       ),
