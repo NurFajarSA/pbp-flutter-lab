@@ -1,3 +1,6 @@
+import 'package:counter_7/view/budget/data_budget_page.dart';
+import 'package:counter_7/view/budget/form_budget_page.dart';
+import 'package:counter_7/view/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class CounterPage extends StatefulWidget {
@@ -27,6 +30,14 @@ class _CounterPageState extends State<CounterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Program Counter'),
+      ),
+      drawer: MyDrawer(
+        title: 'Menu',
+        menu: {
+          'Counter': () => Navigator.pop(context),
+          'Tambah Budget': () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FormBudgetPage())),
+          'Data Budget': () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DataBudgetPage())),
+        },
       ),
       body: Center(
         child: Column(
