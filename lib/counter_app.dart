@@ -1,4 +1,4 @@
-import 'package:counter_7/counter_page.dart';
+import 'package:counter_7/view/counter/counter_page.dart';
 import 'package:flutter/material.dart';
 
 class CounterApp extends StatelessWidget {
