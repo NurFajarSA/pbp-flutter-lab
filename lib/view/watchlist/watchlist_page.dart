@@ -3,6 +3,7 @@ import 'package:counter_7/view/budget/data_budget_page.dart';
 import 'package:counter_7/view/budget/form_budget_page.dart';
 import 'package:counter_7/view/counter/counter_page.dart';
 import 'package:counter_7/view/watchlist/detail_watchlist_page.dart';
+import 'package:counter_7/view/widgets/checkbox.dart';
 import 'package:counter_7/view/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -71,13 +72,16 @@ class WatchlistPage extends StatelessWidget {
                         }),
                         child: Ink(
                           padding: const EdgeInsets.all(10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Row(
                             children: [
-                              Text(
-                                snapshot.data![index].fields.title,
-                                style: const TextStyle(
-                                  fontSize: 20,
+                              MyCheckbox(
+                                  value: snapshot.data![index].fields.watched),
+                              Flexible(
+                                child: Text(
+                                  snapshot.data![index].fields.title,
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ),
                             ],
