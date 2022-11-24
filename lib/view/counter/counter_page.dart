@@ -1,5 +1,6 @@
 import 'package:counter_7/view/budget/data_budget_page.dart';
 import 'package:counter_7/view/budget/form_budget_page.dart';
+import 'package:counter_7/view/watchlist/watchlist_page.dart';
 import 'package:counter_7/view/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -37,6 +38,7 @@ class _CounterPageState extends State<CounterPage> {
           'Counter': () => Navigator.pop(context),
           'Tambah Budget': () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FormBudgetPage())),
           'Data Budget': () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DataBudgetPage())),
+          'Watchlist': () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const WatchlistPage())),
         },
       ),
       body: Center(

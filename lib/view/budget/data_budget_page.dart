@@ -1,6 +1,7 @@
-import 'package:counter_7/model/budget/budget.dart';
+import 'package:counter_7/data/model/budget/budget.dart';
 import 'package:counter_7/view/budget/form_budget_page.dart';
 import 'package:counter_7/view/counter/counter_page.dart';
+import 'package:counter_7/view/watchlist/watchlist_page.dart';
 import 'package:counter_7/view/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +22,8 @@ class DataBudgetPage extends StatelessWidget {
         'Tambah Budget': () => Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const FormBudgetPage())),
         'Data Budget': () => Navigator.pop(context),
+        'Watchlist': () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const WatchlistPage())),
+        
       }),
       body: Container(
         margin: const EdgeInsets.all(16),
