@@ -64,3 +64,27 @@ Widget Navigator bekerja seperti tumpukan layar (stack), ia menggunakan prinsip 
 4. Menambahkan form field pada form page
 5. Validasi input dan submit data
 6. Menambahkan tampilan dan mengambil data budget pada data page
+
+
+# Tugas 9: Integrasi Web Service pada Flutter
+Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer, Universitas Indonesia, Semester Ganjil 2022/2023
+
+#
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Iya bisa, tidak lebih baik. Pengambilan data dari API dengan membuat model memudahkan kita dalam mengolah ataupun memodifikasi data.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- ListView: Tampilan scrollabel
+- Checkbox: Menampilkan checkbox
+- Text: Menampilkan text
+- Flexible: Untuk wrap text
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Pertama mebuat model data sesuai dengan json yang akan diambil. Kemudian, get dengan library http dan decode menjadi json. Terakhir, ubah setiap data pada json menjadi model dart yang telah dibuat sebelumnya.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat model MyWatchlist
+2. Get data dari https://katalogku.herokuapp.com/mywatchlist/json
+3. Refactor widget checkbox
+4. Membuat watchlist page dengan menambahkan checkbox yang sudah di-refactor sebelumnya
+5. Membuat watchlist detail dengan data sesuai dengan list yang di tap di watchlist page
